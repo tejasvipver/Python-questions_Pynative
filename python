@@ -1,0 +1,67 @@
+1. Given two integer numbers, return their product only if the product is equal to or lower than 1000. Otherwise, return their sum.
+s-   def fun (a,b):
+        c = a*b
+        if c <= 1000 :
+            return c 
+        else :
+            return a+b
+        
+    x = fun(40,30)
+    print(x)
+
+2. Print the sum of the current number and the previous number
+s - prev = 0
+    for i in range(0,10):
+        x_sum= prev+i
+        print("Current Number", i, "Previous Number ", prev, " Sum: ", x_sum)
+    prev=i
+
+3. Print characters from a string that are present at an even index number
+s - word = input('Enter word ')
+    size = len(word)
+    print("Printing only even index chars")
+    for i in range(0, size - 1, 2):
+        print("index[", i, "]", word[i])
+or     x = list(word)
+      for i in x[0::2]:
+        print(i)
+
+4. Write a program to remove characters from a string starting from zero up to n and return a new string.
+s - def remove_chars(word, n):
+    print('Original string:', word)
+    x = word[n:]
+    return x
+    print("Removing characters from a string")
+    print(remove_chars("pynative", 4))
+    print(remove_chars("pynative", 2))
+
+5. Check if the first and last number of a list is the same
+s- def first_last_same(numberList):
+    print("Given list:", numberList)
+    first_num = numberList[0]
+    last_num = numberList[-1]
+    if first_num == last_num:
+        return True
+    else:
+        return False
+    numbers_x = [10, 20, 30, 40, 10]
+    print("result is", first_last_same(numbers_x))
+    
+    numbers_y = [75, 65, 35, 75, 30]
+    print("result is", first_last_same(numbers_y))
+
+6: Display numbers divisible by 5 from a list
+s- num_list = [10, 20, 33, 46, 55]
+  print("Given list:", num_list)
+  print('Divisible by 5:')
+  for num in num_list:
+      if num % 5 == 0:
+          print(num)
+
+7: Return the count of a given substring from a string
+s -  str_x = "Emma is good developer. Emma is a writer"
+    # use count method of a str class
+    cnt = str_x.count("Emma")
+    print(cnt)
+
+
