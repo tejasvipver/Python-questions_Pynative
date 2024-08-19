@@ -1,0 +1,104 @@
+1: Create a 4X2 integer array and Prints its attributes  Note: The element must be a type of unsigned int16. And print the following Attributes: –
+            The shape of an array.
+            Array dimensions.
+            The Length of each element of the array in bytes.
+s -  import numpy as np
+      arr = np.empty([4,2], dtype = np.uint16) 
+      print(arr)
+      print("Array Shape is ", arr.shape)
+      print("Array dimensions are ", arr.ndim)
+      print("Length of each element of array in bytes is ", arr.itemsize)
+
+2: Create a 5X2 integer array from a range between 100 to 200 such that the difference between each element is 10
+s -  ar = np.arange(100,200,10)
+     ar = ar.reshape(5,2)
+      print(ar)
+
+3: Following is the provided numPy array. Return array of items by taking the third column from all rows
+s-    ar = np.array([[11 ,22, 33], [44, 55, 66], [77, 88, 99]]) 
+      print("\n Printing array of items in the third column from all rows")
+      ar = ar[ :,2]
+      print(ar)
+
+4: Return array of odd rows and even columns from below numpy array
+s - aar = np.array([[3 ,6, 9, 12], [15 ,18, 21, 24], [27 ,30, 33, 36], [39 ,42, 45, 48], [51 ,54, 57, 60]])
+    print(aar)
+    ar = ar[::2, 1::2]
+    print(ar)
+
+5: Create a result array by adding the following two NumPy arrays. Next, modify the result array by calculating the square of each element
+s-  arrayOne = numpy.array([[5, 6, 9], [21 ,18, 27]])
+    arrayTwo = numpy.array([[15 ,33, 24], [4 ,7, 1]])
+
+6: Split the array into four equal-sized sub-arrays. Note: Create an 8X3 integer array from a range between 10 to 34 such that the difference between each element is 1 and then Split the array into four equal-sized sub-arrays.
+s-  sampleArray = np.arange(10, 34, 1)
+    sampleArray = sampleArray.reshape(8,3)
+    print (sampleArray)
+    print("\nDividing 8X3 array into 4 sub array\n")
+    subArrays = numpy.split(sampleArray, 4) 
+    print(subArrays)
+
+7: Sort following NumPy array
+    Case 1: Sort array by the second row
+    Case 2: Sort the array by the second column
+s - sampleArray = np.array([[34,43,73],[82,22,12],[53,94,66]]) 
+    print(ar)
+    sortArrayByRow = sampleArray[:,sampleArray[1,:].argsort()]
+    print("Sorting Original array by secoond row")
+    print(sortArrayByRow)
+    print("Sorting Original array by secoond column")
+    sortArrayByColumn = sampleArray[sampleArray[:,1].argsort()]
+    print(sortArrayByColumn)
+
+8: Print max from axis 0 and min from axis 1 from the following 2-D array.
+s-  ar = np.array([[34,43,73],[82,22,12],[53,94,66]]) 
+    print (ar)
+    minOfAxisOne = np.amin(ar, 1) 
+    print("Printing amin Of Axis 1")
+    print(minOfAxisOne)
+    maxOfAxisOne = numpy.amax(sampleArray, 0) 
+    print("Printing amax Of Axis 0")
+    print(maxOfAxisOne)
+
+9: Delete the second column from a given array and insert the following new column in its place.
+s -  sampleArray = numpy.array([[34,43,73],[82,22,12],[53,94,66]]) 
+      print (sampleArray)
+      print("Array after deleting column 2 on axis 1")
+      sampleArray = numpy.delete(sampleArray , 1, axis = 1) 
+      print (sampleArray)
+      arr = numpy.array([[10,10,10]])
+      print("Array after inserting column 2 on axis 1")
+      sampleArray = numpy.insert(sampleArray , 1, arr, axis = 1) 
+      print (sampleArray)
+
+10: Create two 2-D arrays and Plot them using matplotlib
+ s-   sampleArray = numpy.array([[34,43,73],[82,22,12],[53,94,66]]) 
+      print (sampleArray)
+      print("Array after deleting column 2 on axis 1")
+      sampleArray = numpy.delete(sampleArray , 1, axis = 1) 
+      print (sampleArray)
+      arr = numpy.array([[10,10,10]])
+      print("Array after inserting column 2 on axis 1")
+      sampleArray = numpy.insert(sampleArray , 1, arr, axis = 1) 
+      print (sampleArray)
+
+---------------------------------------------------------------------------------------------------Pandas Excerise---------------------------------------------------------------------------------------------------------------------------------
+
+1. Concatenate two data frames using the following conditions
+s - GermanCars = {'Company': ['Ford', 'Mercedes', 'BMV', 'Audi'], 'Price': [23845, 171995, 135925 , 71400]}
+    japaneseCars = {'Company': ['Toyota', 'Honda', 'Nissan', 'Mitsubishi '], 'Price': [29995, 23600, 61500 , 58900]}
+    carsDf = pd.concat([GermanCars, japaneseCars], keys=["Germany", "Japan"])                                          concat - vertically combining
+    carsDf
+
+2. Merge two data frames using the following condition
+s - Car_Price = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'], 'Price': [23845, 17995, 135925 , 71400]}
+    car_Horsepower = {'Company': ['Toyota', 'Honda', 'BMV', 'Audi'], 'horsepower': [141, 80, 182 , 160]}                
+    carsDf = pd.merge(carPriceDf, carsHorsepowerDf, on="Company")                                              merge - sideby combining
+    carsDf
+
+
+
+
+
+
+
